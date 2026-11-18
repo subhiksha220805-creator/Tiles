@@ -1,0 +1,46 @@
+* { box-sizing: border-box; }
+:root { color: #0a1b3b; font-family: Arial, Helvetica, sans-serif; font-synthesis: none; }
+body { margin: 0; min-width: 320px; background: #f0f0f0; }
+button { color: inherit; font: inherit; }
+.screen { min-height: 100vh; }
+.is-hidden { display: none !important; }
+
+/* Product card, based on the supplied first-page reference. */
+.product-screen { padding: 8px 2.2%; }
+.product-card { width: 100%; max-width: 1400px; min-height: 495px; margin: 0 auto; padding: 25px 3.6%; display: grid; grid-template-columns: 48% 52%; background: #fff; }
+.product-visual { display: flex; flex-direction: column; align-items: center; }
+.tile-sample { width: 208px; height: 313px; background-image: url('images/marble-background.png'); background-size: cover; background-position: center; box-shadow: 0 0 1px #8e7764; }
+.tile-thumbnails { width: 100%; display: flex; justify-content: flex-start; gap: 5px; margin-top: 4px; }
+.tile-thumbnails span { width: 87px; height: 88px; border: 1px solid #999; padding: 0 14px; background-image: url('images/marble-background.png'); background-size: cover; background-position: center; background-clip: content-box; }
+.product-info { position: relative; }
+.product-info h1 { margin: 12px 0 49px; text-align: center; font: bold 36px Georgia, 'Times New Roman', serif; color: #101c31; }
+.product-details { width: 272px; min-height: 192px; margin-left: 1%; padding: 17px 31px; border-radius: 44px 0 44px 0; background: #f1f1f1; font: 16px Georgia, 'Times New Roman', serif; }
+.product-details p { margin: 7px 0 17px; white-space: nowrap; }
+.qr-link { position: absolute; top: 96px; left: 57%; display: flex; align-items: center; flex-direction: column; gap: 14px; padding: 0; border: 0; background: transparent; cursor: pointer; font: bold 16px Georgia, 'Times New Roman', serif; }
+.qr-link:hover strong { text-decoration: underline; }
+.qr-art { width: 112px; height: 112px; display: block; object-fit: contain; }
+
+/* Size selection page */
+.sizes-screen { position: relative; overflow: hidden; padding: 22px 16px 42px; background: linear-gradient(#6b4c3760,#6b4c3760), url('images/marble-background.png') center / cover fixed; color: #fff; text-align: center; }
+.sizes-screen::before { content:""; position:absolute; inset:0; background: url('images/marble-background.png') center / cover; filter: blur(1px); z-index:-1; }
+.size-content { position: relative; width: min(625px, 100%); margin: 0 auto; }
+.brand-mark { display:flex; align-items:center; flex-direction:column; color:#171717; font-size:30px; line-height:1; margin-bottom:48px; }
+.brand-mark strong { font-size:35px; letter-spacing:-2px; }.brand-mark small {font-size:14px; margin-top:7px}
+.size-content h1 { font-size:40px; margin:0 0 10px; color:white; }.collection-name {margin:0 0 16px;font-size:19px}
+.size-options { display:grid; gap:18px; }
+.size-option { min-height:106px; padding:16px; border:0; border-radius:17px; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:#101e40; cursor:pointer; box-shadow:0 8px 24px #35231620; transition:transform .18s, box-shadow .18s; }
+.size-option:hover {transform:translateY(-2px);box-shadow:0 12px 27px #35231635}.size-option span {font-size:21px}.size-option small {font-size:17px;color:#7c89a7}
+.back-button { position:absolute; z-index:2; top:18px; left:20px; width:42px; height:42px; border:0; border-radius:50%; background:#fff; color:#12203f; font-size:25px; cursor:pointer; box-shadow:0 3px 12px #0002; }
+.server-notice { position:fixed; z-index:20; left:50%; bottom:18px; transform:translateX(-50%); width:min(600px,calc(100% - 28px)); margin:0; padding:15px 18px; border-radius:10px; background:#fff3cd; color:#493a16; box-shadow:0 5px 24px #0003; text-align:center; }
+
+/* Room selection and 360 viewer */
+.rooms-screen { min-height:100vh; padding:20px 18px 50px; background:linear-gradient(#eee6dc66,#eee6dc66), url('images/marble-background.png') center / cover fixed; }
+.rooms-header {text-align:center;position:relative}.rooms-header .back-button {top:0;left:2px}.rooms-header h1 {margin:0;font-size:42px}.rooms-header p {margin:10px 0;font-size:20px}.rooms-header .price-line {font-size:18px;margin:22px 0 25px}
+.contact-icons {display:flex;justify-content:center;gap:14px;margin:0 0 30px}.contact-icons span {width:62px;height:62px;display:grid;place-items:center;background:#fff;border-radius:50%;font-size:24px;box-shadow:0 3px 12px #0001}
+.room-grid {width:min(625px,100%);margin:auto;display:grid;gap:18px}
+.room-card {padding:0 0 21px;border:0;border-radius:16px;overflow:hidden;background:#fff;color:inherit;text-align:center;text-decoration:none;cursor:pointer;box-shadow:0 8px 24px #35231620;transition:transform .18s}.room-card:hover {transform:translateY(-2px)}
+.room-card img {width:100%;height:248px;object-fit:cover;display:block}.room-card span,.room-card small {display:block}.room-card span {font-size:21px;margin:20px 0 10px}.room-card small {font-size:17px;color:#7c89a7}
+.viewer-modal {position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:20px;background:#090d16d9}.viewer-panel {width:min(1100px,100%);background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 20px 80px #0008}.viewer-bar {min-height:72px;padding:13px 20px;display:flex;align-items:center;justify-content:space-between}.viewer-bar h2 {margin:0 0 4px;font-size:21px}.viewer-bar p {margin:0;color:#74809a;font-size:14px}.viewer-bar button {width:40px;height:40px;border:0;border-radius:50%;background:#f0f0f0;font-size:30px;cursor:pointer}#panorama {width:100%;height:min(68vh,650px);background:#181818}
+@media(max-width:700px) {
+ .product-screen {padding:0}.product-card {min-height:100vh;padding:24px 18px;grid-template-columns:1fr;gap:18px}.product-info h1 {font-size:30px;margin:0 0 20px}.tile-sample {width:190px;height:265px;background-size:auto 265px}.tile-thumbnails {justify-content:center}.tile-thumbnails span {width:58px;height:62px;padding:0 7px;background-size:auto 60px}.product-info {display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.product-details {width:auto;min-height:0;margin:0;padding:14px 18px;font-size:14px}.product-details p {margin:5px 0 10px}.qr-link {position:static;gap:9px;font-size:12px;max-width:120px}.qr-art {width:84px;height:84px}.sizes-screen {background-attachment:scroll}.size-content h1 {font-size:32px}.brand-mark {margin-bottom:35px}.rooms-screen {padding:18px 14px 35px;background-attachment:scroll}.rooms-header h1 {font-size:32px;padding-top:48px}.rooms-header p {font-size:16px}.rooms-header .price-line {font-size:14px;margin:16px 0 20px}.contact-icons span {width:48px;height:48px}.room-card img {height:205px}#panorama {height:60vh}.viewer-modal {padding:10px}
+}

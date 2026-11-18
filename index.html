@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#eeeae4">
+    <title>Brescia Viva | 360° Virtual Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="screen product-screen" id="productScreen" aria-label="Brescia Viva tile details">
+            <div class="product-card">
+                <div class="product-visual">
+                    <div class="tile-sample" aria-label="Brescia Viva marble tile"></div>
+                    <div class="tile-thumbnails" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1>BRESCIA VIVA</h1>
+                    <div class="product-details">
+                        <p><strong>Size:</strong> 1200 X 1800 mm</p>
+                        <p><strong>Thickness:</strong> 9 mm</p>
+                        <p><strong>Finish:</strong> Tile Glossy</p>
+                        <p><strong>Surface:</strong> SCS Marble</p>
+                    </div>
+                    <button class="qr-link" id="openSizes" aria-label="Open 360 degree virtual sizes">
+                        <strong>Click here for 360° Virtual</strong>
+                        <img class="qr-art" src="images/qr-virtual.png" alt="Open the 360 degree virtual page">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="screen sizes-screen is-hidden" id="sizesScreen" aria-label="Choose tile size">
+            <button class="back-button" data-back="productScreen" aria-label="Back to product">←</button>
+            <div class="size-content">
+                <div class="brand-mark">◉<strong>Simpolo</strong><small>Tiles &amp; Bathware</small></div>
+                <h1>BRESCIA VIVA</h1>
+                <p class="collection-name">FORZA SUN</p>
+                <div class="size-options">
+                    <button class="size-option" data-size="120X240 &amp; 120X180cm"><span>120X240 &amp; 120X180cm</span><small>Click for Virtual 360</small></button>
+                    <button class="size-option" data-size="120X240cm"><span>120X240cm</span><small>Virtual 360</small></button>
+                    <button class="size-option" data-size="80X160cm"><span>80X160cm</span><small>Click for Virtual 360</small></button>
+                    <button class="size-option" data-size="60X120cm"><span>60X120cm</span><small>Click for Virtual 360</small></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="screen rooms-screen is-hidden" id="roomsScreen" aria-label="Choose a room to view in 360 degrees">
+            <p class="server-notice is-hidden" id="serverNotice" role="alert">To use the 360° images, close this tab and double-click <strong>start-viewer.bat</strong> in the project folder. Use the browser tab it opens; do not open viewer.html directly.</p>
+            <header class="rooms-header">
+                <button class="back-button" data-back="sizesScreen" aria-label="Back to sizes">←</button>
+                <div><h1>BRESCIA VIVA</h1><p>Visualize in Different Spaces.</p><p class="price-line">*MRP Sq.Ft.* 120x240cm - ₹ 247 &amp; 120x180cm - ₹ 209</p></div>
+            </header>
+            <div class="contact-icons" aria-hidden="true"><span>☎</span><span>•••</span><span>✉</span><span>⌖</span></div>
+            <div class="room-grid">
+                <a class="room-card" href="viewer.html?room=livingroom"><img src="images/livingroom.png" alt="Living room with Brescia Viva tiles"><span>LIVING ROOM</span><small>Click for Virtual 360</small></a>
+                <a class="room-card" href="viewer.html?room=bedroom"><img src="images/bedroom.png" alt="Bedroom with Brescia Viva tiles"><span>BEDROOM</span><small>Click for Virtual 360</small></a>
+                <a class="room-card" href="viewer.html?room=bathroom"><img src="images/bathroom.png" alt="Bathroom with Brescia Viva tiles"><span>BATHROOM</span><small>Click for Virtual 360</small></a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

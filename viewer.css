@@ -1,0 +1,11 @@
+* { box-sizing: border-box; }
+html, body { width:100%; height:100%; margin:0; overflow:hidden; background:#111; color:#fff; font-family:Arial,Helvetica,sans-serif; }
+.viewer-page { position:relative; width:100%; height:100%; background:#111; }
+#panorama { position:absolute; inset:0; width:100%; height:100%; background:#111; }
+.viewer-toolbar { position:absolute; z-index:3; top:18px; left:18px; display:flex; align-items:center; gap:13px; padding:9px 16px 9px 9px; border-radius:40px; color:#101d38; background:#fffffff0; box-shadow:0 4px 22px #0004; }
+.viewer-back { width:42px; height:42px; display:grid; place-items:center; border-radius:50%; background:#f0f0f0; color:#10203c; text-decoration:none; font-size:27px; }
+.viewer-toolbar h1 { margin:0 0 3px; font-size:17px; }
+.viewer-toolbar p { margin:0; color:#727d95; font-size:13px; }
+.viewer-message { position:absolute; z-index:4; left:50%; top:50%; transform:translate(-50%,-50%); width:min(520px,calc(100% - 32px)); padding:20px; border-radius:10px; text-align:center; line-height:1.5; color:#26324a; background:#fff; box-shadow:0 8px 34px #0008; }
+.is-hidden { display:none !important; }
+@media(max-width:600px) { .viewer-toolbar {top:12px;left:12px}.viewer-toolbar h1 {font-size:15px}.viewer-toolbar p {font-size:12px} }

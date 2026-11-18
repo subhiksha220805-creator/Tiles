@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+    <title>360° Room Viewer | Brescia Viva</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
+    <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+    <main class="viewer-page">
+        <div class="viewer-toolbar">
+            <a class="viewer-back" href="index.html#roomsScreen" aria-label="Back to room choices">←</a>
+            <div><h1 id="roomTitle">360° Room View</h1><p>Drag to look around · scroll to zoom</p></div>
+        </div>
+        <div id="panorama" aria-label="Interactive 360 degree room panorama"></div>
+        <p class="viewer-message is-hidden" id="viewerMessage" role="alert"></p>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
+    <script src="viewer.js"></script>
+</body>
+</html>
